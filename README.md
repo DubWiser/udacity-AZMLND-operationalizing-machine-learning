@@ -49,7 +49,7 @@ I set the training job time(hrs) to **1** and max concurrent iterations to **1**
 The AutoML run has started and will take some time to complete
 ![Start AutoML Run](images/6.start_automl_run.png)
 
-
+#### Auto ML run completed
 
 
 
