@@ -1,4 +1,4 @@
-# Operationalizing Machine Learning
+# Operationalizing Machine Learning in Azure ML
 ### Overview : 
 This project is part of the Udacity Azure ML Nanodegree. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We also create, publish, and consume a pipeline.
 
@@ -91,10 +91,11 @@ To consume our best AutoML model using Swagger, we first need to download the **
 
 Then we run the **swagger.sh** and **serve.py** files to be able to interact with the swagger instance running with the documentation for the HTTP API of the model.
 
+*Figure 16 - 20: Swagger UI*
 
 ![swagger.sh](images/16.swagger.sh.png)
 
-![swagger_log.sh](images/17.swagger_log.png)
+![swagger_log.sh](images/17.swagger_logs.png)
 
 After running the script, we can find our best model's documentation instead of the default Swagger page.
 ![swagger_ui.sh](images/18.swagger_ui.png)
@@ -105,7 +106,57 @@ This is the content of the API, diplaying the methods used to interact with the 
 And this is the input for the **/score** POST method that returns our deployed model's preditions.
 ![swagger_ui.sh](images/20.swagger_ui2.png)
 
+### 6. Consume model endpoints
 
+In order to interact with the model and feed some test data to it,we add the **scoring_uri** and the **key** to the **endpoint.py** script and run it.
+
+*Figure 21 - 23: Endpoint consumption*
+
+The screenshot below shows the REST endpoint along with the primary and secondary keys.
+![Consume the endpoint](images/21.endpoint.py.png)
+
+Use the scoring URI and the primary key to update the endpoint.py script.
+![Consume the endpoint2](images/22.endpoint_key.png)
+
+Execute the endpoint.py script to get the inference from the deployed model.
+![Consume the endpoint3](images/23.endpoint_run.png)
+
+#### (Optional) Benchmark
+To do this, we make sure **Apache Benchmark** is installed and available. After executing the **endpoint.py** script, we run the **benchmark.sh** scripe to load-test our deployed model. After ensuring *Apache Benchmark* is available, run the benchmark.sh script.
+
+*Figure 24 - 25: Steps to enable logging*
+
+![Benchmark](images/24.benchmark.sh.png)
+Results of load-testing our deployed model.
+
+![Benchmark](images/25.benchmark.sh2.png)
+
+This gives us insights on things like: Requests per second, Average time per request, Number of failed requests, etc.
+
+### 7. Create and publish a pipeline
+
+The Jupyter Notebook named **aml-pipelines-with-automated-machine-learning-step** was used to create a **Pipeline**
+
+I created, consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.
+
+*Figure 26: Create a Pipeline in the SDK*
+![Pipeline SDK](images/26.aml_nb.png)
+After updating the notebook to have the same keys, URI, dataset, cluster, and model names already created, I run through the cells to create a pipeline.
+
+*Figure 27: Pipeline in Azure Studio*
+![Pipeline Studio](images/27.aml_studio.png)
+This is the pipeline created in the *Pipelines* section of Azure ML Studio.
+
+*Figure 28: Pipeline Overview in Azure Studio*
+![Pipeline Overview](images/29.aml_studio_pipeline_completed.png)
+This is the Pipeline Overview in the Azure ML Studio.
+
+*Figure 29-30: Create the REST endpoint*
+![Pipeline Endpoint](images/28.aml_pipeline_endpoint.png)
+
+![Pipeline Endpoint](images/30.aml_rest_endpoint.png)
+
+This is the REST endpoint in Azure ML Studio, with a status of ACTIVE.
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
