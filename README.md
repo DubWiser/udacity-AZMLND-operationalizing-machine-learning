@@ -33,15 +33,21 @@ For the compute cluster, I used the **Standard_DS12_v2** for the Virtual Machine
 I ran the experiment using classification, without enabling Deep Learning. The run took some time to test various models and found the best model for the task.
 
 *Figure 2 - 6: Configuring the auto-ml run*
+
+Select the Virtual Machine - **Standard_DS12_v2**
 ![Compute](images/2.compute.png)
 
+Select the min and max number of nodes 
 ![Settings](images/3.settings.png)
 
+Select the kind of ML algorithms to use based on the problem. I chose Classification (without enabling Deep Learning)
 ![Select Classification](images/4.classification.png)
 
+I set the training job time(hrs) to **1** and max concurrent iterations to **1**
 ![Further Settings](images/5.further_settings.png)
 
-![Start AutoML Run](images/5.start_automl_run.png)
+The AutoML run has started and will take some time to complete
+![Start AutoML Run](images/6.start_automl_run.png)
 
 
 
