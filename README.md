@@ -92,7 +92,18 @@ To consume our best AutoML model using Swagger, we first need to download the **
 Then we run the **swagger.sh** and **serve.py** files to be able to interact with the swagger instance running with the documentation for the HTTP API of the model.
 
 
+![swagger.sh](images/16.swagger.sh.png)
 
+![swagger_log.sh](images/17.swagger_log.png)
+
+After running the script, we can find our best model's documentation instead of the default Swagger page.
+![swagger_ui.sh](images/18.swagger_ui.png)
+
+This is the content of the API, diplaying the methods used to interact with the model.
+![swagger_ui.sh](images/19.swagger_ui1.png)
+
+And this is the input for the **/score** POST method that returns our deployed model's preditions.
+![swagger_ui.sh](images/20.swagger_ui2.png)
 
 
 ## Screen Recording
