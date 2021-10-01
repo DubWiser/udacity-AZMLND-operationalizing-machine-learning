@@ -147,11 +147,11 @@ After updating the notebook to have the same keys, URI, dataset, cluster, and mo
 ![Pipeline Studio](images/27.aml_studio.png)
 This is the pipeline created in the *Pipelines* section of Azure ML Studio.
 
-*Figure 29: Pipeline Overview in Azure Studio*
-![Pipeline Overview](images/29.aml_pipeline_completed.png)
+*Figure 28: Pipeline Overview in Azure Studio*
+![Pipeline Overview](images/29.aml_studio_pipeline_completed.png)
 This is the Pipeline Overview in the Azure ML Studio.
 
-*Figure 30-31-32: Create the REST endpoint*
+*Figure 29-30: Create the REST endpoint*
 ![Pipeline Endpoint](images/28.aml_pipeline_endpoint.png)
 
 ![Pipeline Endpoint](images/30.aml_rest_endpoint.png)
