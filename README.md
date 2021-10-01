@@ -49,7 +49,9 @@ I set the training job time(hrs) to **1** and max concurrent iterations to **1**
 The AutoML run has started and will take some time to complete
 ![Start AutoML Run](images/6.start_automl_run.png)
 
-#### Auto ML run completed
+### 3. Deploy the best model
+
+*Figure 7 - 11: Selecting the best model and deploying it*
 
 After an hour, the AutoML run is completed
 ![Auto ML run completed](images/7.run_completed.png)
@@ -60,8 +62,32 @@ After an hour, the AutoML run is completed
 *Model Metrics deep - dive* - On selecting the best model, we can look at various metrics like precision, recall, AUC etc
 ![Model metrics](images/9.model_metrics.png)
 
-*Deploy Model* - Select the best model and deploy it by assigning a name, and choosing the compute type (Azure Container Instance, in our case). Click on deploy.
+*Deploy Model* - Select the best model and deploy it by assigning a name, and choosing the compute type (Azure Container Instance, in our case) and Authentication enabled. Click on deploy.
 ![Deploy Model](images/10.deploy_model.png)
+
+*Deployment Successful!!!*
+![Deployed](images/11.dedployment_successful.png)
+
+### 4. Enable logging
+
+*Figure 12 - 15: Steps to enable logging*
+
+Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
+
+![az_login](images/12.az_login.png)
+
+In the logs.py script, enable application insights by adding this line 
+- **service.update(enable_app_insights = True)**
+
+![logs.py](images/13.logs_enable_app_insights.png)
+
+![logs.py2](images/14.logger_initialised.png)
+
+Running the logs.py script requires interactive authentication, after successfully logging in, we can see the logs in the screenshots above.
+
+![logs.py3](images/15.endpoint_enabled_insights.png)
+
+
 
 
 ## Screen Recording
