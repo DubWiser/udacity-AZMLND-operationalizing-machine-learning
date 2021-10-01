@@ -158,7 +158,13 @@ This is the Pipeline Overview in the Azure ML Studio.
 
 This is the REST endpoint in Azure ML Studio, with a status of ACTIVE.
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+[Youtube Link]Link to screen recording - https://youtu.be/G-zim60m7P0
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+Some ways of improving the model performance are -
+- since the data is highly imbalanced, use a technique to first handle the imbalance issue to improve the model predictions
+- change the scoring metric from accuracy to precision, recall or AUC since accuracy is not a good metric for evaluation imbalanced data problems
+- enable deep learning which will train more models and may yield a better performing model
+
+![Suggestions](images/31.suggestions.png)
