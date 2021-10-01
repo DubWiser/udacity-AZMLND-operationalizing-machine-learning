@@ -51,6 +51,17 @@ The AutoML run has started and will take some time to complete
 
 #### Auto ML run completed
 
+After an hour, the AutoML run is completed
+![Auto ML run completed](images/7.run_completed.png)
+
+*Best Model* - Going into the experiment, the best model appears on the top based on the evaluation metrics we chose at the time of configuration (accuracy in this case). This time its a Voting Ensemble model
+![Best Model](images/8.best_model.png)
+
+*Model Metrics deep - dive* - On selecting the best model, we can look at various metrics like precision, recall, AUC etc
+![Model metrics](images/9.model_metrics.png)
+
+*Deploy Model* - Select the best model and deploy it by assigning a name, and choosing the compute type (Azure Container Instance, in our case). Click on deploy.
+![Deploy Model](images/10.deploy_model.png)
 
 
 ## Screen Recording
