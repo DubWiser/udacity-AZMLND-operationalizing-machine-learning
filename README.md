@@ -72,20 +72,25 @@ After an hour, the AutoML run is completed
 
 *Figure 12 - 15: Steps to enable logging*
 
-Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
+Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.Running the **logs.py** script requires interactive authentication
 
 ![az_login](images/12.az_login.png)
 
-In the logs.py script, enable application insights by adding this line 
+We enable application insights by adding this line to the script
 - **service.update(enable_app_insights = True)**
 
 ![logs.py](images/13.logs_enable_app_insights.png)
 
 ![logs.py2](images/14.logger_initialised.png)
 
-Running the logs.py script requires interactive authentication, after successfully logging in, we can see the logs in the screenshots above.
-
 ![logs.py3](images/15.endpoint_enabled_insights.png)
+
+### 5. Swagger Documentation
+
+To consume our best AutoML model using Swagger, we first need to download the **swagger.json** file provided to us in the Endpoints section of Azure Machine Learning Studio.
+
+Then we run the **swagger.sh** and **serve.py** files to be able to interact with the swagger instance running with the documentation for the HTTP API of the model.
+
 
 
 
