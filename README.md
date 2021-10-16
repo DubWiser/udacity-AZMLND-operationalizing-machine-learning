@@ -159,7 +159,7 @@ This is the Pipeline Overview in the Azure ML Studio.
 This is the REST endpoint in Azure ML Studio, with a status of ACTIVE.
 ## Screen Recording
 
-- Link to screen recording **submission 2** - https://youtu.be/zB0Yb2gnM58
+- Link to screen recording **submission 2** - https://youtu.be/zB0Yb2gnM58 (with voice-over)
 - Link to screen recording **submission 1**- https://youtu.be/G-zim60m7P0
 
 ## Standout Suggestions
